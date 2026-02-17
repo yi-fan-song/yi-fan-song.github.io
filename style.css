@@ -1,8 +1,8 @@
 body {
-	background-color: white;
+	background-color: #fdf6e3;
 	font-family: "Open Sans", Roboto, sans-serif;
 	font-size: 16px;
-	color: #080808a6;
+	color: #5c6a72;
 }
 
 main {
@@ -10,7 +10,7 @@ main {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color: #002f6d;
+	color: #5c6a72;
 }
 
 h1 {
@@ -27,23 +27,23 @@ p {
 }
 
 a {
-	color: #0050b8;
+	color: #8da101;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #002f6d;
+	color: #35a77c;
 }
 
 /* Footer section */
 footer {
-	background-color: #002f6d;
+	background-color: #5c6a72;
 	text-align: center;
 }
 
 footer p, footer h6, footer h5 {
 	margin: 0px;
-	color: #f0f8ff;
+	color: #fdf6e3;
 }
 
 footer p {
@@ -61,20 +61,19 @@ footer p {
 	align-items: center;
 	justify-items: center;
 	height: 200px;
-	background-image: url("/cube-background.jpg");
-	background-size: contain;
+	background-color: #5c6a72;
 	font-weight: 600;
 	text-align: center;
 }
 
 .banner #banner-title {
-	color: #f0f8ff;
+	color: #fdf6e3;
 	font-size: 3rem;
 }
 
 .banner #banner-subtitle {
 	font-size: 1rem;
-	color: #f0f8ffd5;
+	color: #f0f1d2;
 }
 
 /* Regular phone sizes */
@@ -107,4 +106,44 @@ footer p {
 
 /* 14400p and higher */
 @media screen and (min-width: 2400px) {
+}
+
+/* Dark mode - Everforest */
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: #1e2326;
+		color: #d3c6aa;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		color: #d3c6aa;
+	}
+
+	a {
+		color: #a7c080;
+	}
+
+	a:hover {
+		color: #d3c6aa;
+	}
+
+	footer {
+		background-color: #425047;
+	}
+
+	.banner {
+		background-color: #425047;
+	}
+
+	.banner #banner-title {
+		color: #d3c6aa;
+	}
+
+	.banner #banner-subtitle {
+		color: #7a8478;
+	}
+
+	footer p, footer h6, footer h5 {
+		color: #d3c6aa;
+	}
 }
