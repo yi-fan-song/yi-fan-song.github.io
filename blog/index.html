@@ -1,0 +1,38 @@
+---
+layout: default
+title: Blog — Yi Fan Song
+banner_subtitle: Blog
+permalink: /blog/
+---
+<section>
+	<p><a href="/">← Back to home</a></p>
+	<h1>Blog</h1>
+	{% if paginator.posts.size > 0 %}
+		<ul>
+			{% for post in paginator.posts %}
+				<li>
+					<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+					<p>
+						<time datetime="{{ post.date | date_to_xmlschema }}">
+							{{ post.date | date: "%B %-d, %Y" }}
+						</time>
+					</p>
+					{% if post.excerpt %}{{ post.excerpt }}{% endif %}
+				</li>
+			{% endfor %}
+		</ul>
+		{% if paginator.total_pages > 1 %}
+			<nav>
+				{% if paginator.previous_page %}
+					<a href="{{ paginator.previous_page_path | relative_url }}">← Newer</a>
+				{% endif %}
+				<span>Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+				{% if paginator.next_page %}
+					<a href="{{ paginator.next_page_path | relative_url }}">Older →</a>
+				{% endif %}
+			</nav>
+		{% endif %}
+	{% else %}
+		<p>No posts yet.</p>
+	{% endif %}
+</section>

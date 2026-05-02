@@ -1,0 +1,27 @@
+title: Yi Fan Song
+tagline: Software Engineer | Mathematics Enjoyer
+description: Personal site of Yi Fan Song.
+url: https://www.yifansong.ca
+
+permalink: /blog/:year/:month/:day/:slug/
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .gitignore
