@@ -1,36 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>{{ page.title | default: site.title }}</title>
-		<link rel="stylesheet" href="/normalize.css" />
-		<link rel="stylesheet" href="/style.css" />
-		<link rel="icon" type="image/png" href="/noodles.png" />
-	</head>
-	<body>
-		<div class="banner">
-			<div>
-				<div id="banner-title">{{ site.title }}</div>
-				<div id="banner-subtitle">{{ page.banner_subtitle | default: site.tagline }}</div>
-			</div>
-		</div>
-		<main>
-			{{ content }}
-		</main>
-		<footer>
-			<h5 id="copyright-notice">©Yi Fan Song 2025</h5>
-			<section>
-				<h6>Attributions</h6>
-				<div>
-					<p>
-						Icon made by
-						<a href="https://www.flaticon.com/authors/surang" title="surang">surang</a>
-						from
-						<a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
-					</p>
-				</div>
-			</section>
-		</footer>
-	</body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>{{ page.title | default: site.title }}</title>
+        <link rel="stylesheet" href="/normalize.css" />
+        <link rel="stylesheet" href="/style.css" />
+        <link rel="icon" type="image/png" href="/noodles.png" />
+    </head>
+    <body>
+        <div class="banner">
+            <div>
+                <div id="banner-title">{{ site.title }}</div>
+                <div id="banner-subtitle">
+                    {{ page.banner_subtitle | default: site.tagline }}
+                </div>
+            </div>
+        </div>
+        <main>{{ content }}</main>
+        <footer>
+            <h5 id="copyright-notice">©Yi Fan Song 2026</h5>
+            <section>
+                <h6>Attributions</h6>
+                <div>
+                    <p>
+                        Icon made by
+                        <a
+                            href="https://www.flaticon.com/authors/surang"
+                            title="surang"
+                            >surang</a
+                        >
+                        from
+                        <a href="https://www.flaticon.com/" title="Flaticon"
+                            >www.flaticon.com</a
+                        >
+                    </p>
+                </div>
+            </section>
+        </footer>
+    </body>
 </html>
