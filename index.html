@@ -180,9 +180,17 @@ title: Yi Fan Song
     </p>
     <h2>about my blog</h2>
     <p>
-        I suppose this would also contain a list of recent blogs if I ever
-        decide to blog. See <a href="/blog/">/blog</a>. [WIP]
+        I do blog now, occasionally. Recent posts:
     </p>
+    <ul>
+        {% for post in site.posts limit:5 %}
+        <li>
+            <a href="{{ post.url }}">{{ post.title }}</a> —
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+        </li>
+        {% endfor %}
+    </ul>
+    <p>See <a href="/blog/">/blog</a> for the full list.</p>
 </section>
 <section>
     <h1>Things I Read</h1>
